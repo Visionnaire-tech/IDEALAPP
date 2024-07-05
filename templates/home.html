@@ -1,0 +1,102 @@
+{% extends "acc.html" %}
+{% load static %}
+{% block title %}| Acceuil{% endblock %}
+{% block content %}
+  <section id="showcase">
+    <div class="container">
+      
+      <h1 class="bg-secondary rounded-5">Bienvenue dans <span>IdéalApp</span></h1>
+      
+      
+      
+      <p style="color:#035216;" class="fw-bold"><strong> {{ user }} {{ user.last_name }} {{ user.first_name }} {{ note.promotions }}</strong> </p>
+
+      <p style="color:#035216;"> <strong> Meilleur façon d'apprendre et de Controler en ligne , Téléchargement support et receuils des exercices </strong></p>
+    </div>
+  </section>
+  <section id="newsletter">
+    <div class="container">
+      <p>IdealApp school est une plateforme d'évaluation en ligne et qui améliorère vos connaissance intellectuelle grace à ses <a href="{% url 'pdf' %}" style="text-decoration: none;">cours</a> et <a href="{% url 'exer' %}" style="text-decoration: none;"><strong>exercices</strong></a>  mises en ligne .</p>
+      
+      <br>
+      <div class="">
+        <!--Grid column-->
+        <div class="col-auto">
+          <p class="pt-2">
+            <strong></strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+
+  </section>
+<div class="">
+    <div class="card text-center">
+      <div class="card-header">
+        <h4>Tout se passe dans IdealApp</h4>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Envois travail</h5>
+        <p class="card-text"> transférez vos traveaux en verifiant avant de l'envoyer</p>
+        <a href="{% url 'envoistp' %}" class="btn button_1">Cliquez pour envoyer</a>
+      </div>
+    </div><br>
+    <div class="h4 pb-2 mb-4 text-dark border-bottom border-dark">
+      <div class="row d-flex justify-content-center">
+        <!--Grid column-->
+        
+        <div class="col-auto">
+          <h5 class="pt-2">
+            <strong>Téléchargement des logiciels</strong>
+          </h5>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!--Grid column-->
+    <section id="boxes">
+      <div class="container">
+        <div class="box">
+          <img src="{% static 'assets/img/4.jpg' %}">
+          <h3>Python-3</h3>
+          <p>Téléchargez la nouvelle version du python gratuitement pour la création de vos Applications.</p>
+          <a href="https://www.python.org/ftp/python/3.12.3/python-3.12.3-amd64.exe" class="btn button_1" >Télécharger</a>
+        </div>
+        <div class="box">
+          <img src="{% static 'assets/img/wamp.png' %}">
+          <br>
+          <br>
+
+          <h3>WampServer</h3>
+          <br>
+
+          <p>Téléchargez la nouvelle version du python gratuitement pour la création de vos bases de données.</p>
+          <a href="https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/wampserver3.3.2_x64.exe/download" class="btn button_1" >Télécharger</a>
+        </div>
+        <div class="box">
+          <img src="{% static 'assets/img/pyc.jpeg' %}">
+          <br>
+          <br>
+
+          <h3>Pycharm</h3>
+          <br>
+
+          <p>Téléchargez Une environnement puissante et idéal de python gratuitement pour la réalisation de vos projet.</p>
+          <a href="https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/wampserver3.3.2_x64.exe/download" class="btn button_1" >Télécharger</a>
+        </div>
+        
+      </div>
+    </section>
+      
+  </div>
+  
+</div>
+
+{% endblock %}
+
+
+

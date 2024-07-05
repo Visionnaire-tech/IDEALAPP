@@ -1,0 +1,33 @@
+{% extends "acc.html" %}
+{% block title %}| Envois Travail{% endblock %}
+{% block content %}
+<br>
+<br>
+<div class="h4 pb-2 mb-4 text-primary border-bottom border-primary">
+  <div class="row d-flex justify-content-center">
+    <!--Grid column-->
+    
+    <div class="col-auto">
+      <h5 class="pt-2">
+        <strong>Vérifier votre travail avant de l'envoyer </strong>
+      </h5>
+    </div>
+  </div>
+</div> 
+
+
+<div class="row d-flex justify-content-center">
+  <div class="col-auto">
+    <form method="post" role="form" enctype="multipart/form-data">
+
+      <div class="form-group">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Save</button>
+      </div>
+    
+    </form>
+  </div>
+</div>
+
+{% endblock %}

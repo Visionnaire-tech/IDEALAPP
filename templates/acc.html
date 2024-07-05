@@ -1,0 +1,341 @@
+{% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Bootstrap 5 -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+   <title>
+    IdéalApp {% block title %} {% endblock %}
+   </title>
+  <body id="page-top">
+
+    <style>
+      .home{
+        margin-top: 6rem;
+      }
+      .home .row{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+      .home .row .content {
+        flex: 1 1 40rem;
+        text-align: center;
+      }
+      .home .row .image {
+        flex: 1 1 30rem;
+      }
+      .home .row .image img{
+        width: 100%;
+      }
+      .home .row .content h3 p{
+        margin-bottom: 1rem;
+        font-size: 4rem;
+        color: #f3bb02;
+        line-height: 1;
+      }
+      .home .row .content h3 span{
+        color: #248fd6;
+      }
+
+      body{
+      font: 15px/1.5 Arial, Helvetica,sans-serif;
+      padding:0;
+      margin:0;
+      background-color:#f4f4f4;
+    }
+    
+    /* Global */
+    .container{
+      width:80%;
+      margin:auto;
+      overflow:hidden;
+    }
+    
+    ul{
+      margin:0;
+      padding:0;
+    }
+    
+    .button_1{
+      height:38px;
+      background:#248fd6;
+      border:0;
+      padding-left: 20px;
+      padding-right:20px;
+      color:#ffffff;
+    }
+    
+    .dark{
+      padding:15px;
+      background:#030f1c;
+      color:#ffffff;
+      margin-top:10px;
+      margin-bottom:10px;
+    }
+    
+    /* Header **/
+    header{
+      background:#030f1c;
+      color:#ffffff;
+      padding-top:30px;
+      min-height:70px;
+      border-bottom:#248fd6 3px solid;
+      align-items: center;
+    }
+    
+    header a{
+      color:#ffffff;
+      text-decoration:none;
+      text-transform: uppercase;
+      font-size:16px;
+    }
+    
+    header li{
+      float:left;
+      display:inline;
+      padding: 0 20px 0 20px;
+    }
+    
+    header #branding{
+      float:left;
+      display: flex;
+      align-items: center;
+    }
+    
+    header #branding h1{
+      margin:0;
+    }
+    
+    header nav{
+      float:right;
+      margin-top:10px;
+
+    }
+    
+    header .highlight{
+      color:#248fd6;
+      font-weight:bold;
+    }
+    
+    header a:hover{
+      color:#cccccc;
+      font-weight:bold;
+    }
+    
+    /* Showcase */
+    #showcase{
+      min-height:350px;
+      background:url('{% static "assets/img/bg-1.jpg" %}') no-repeat;
+      background-position: center;
+      background-size: cover;
+      text-align:center;
+      color:#f8f5e9;
+
+    }
+    
+    #showcase h1{
+      margin-top:100px;
+      font-size:55px;
+      margin-bottom:10px;
+    }
+    
+    #showcase p{
+      font-size:20px;
+    }
+    
+    /* Newsletter */
+    #newsletter{
+      padding:15px;
+      color:#ffffff;
+      background:#35424a;
+    }
+    
+    #newsletter h1{
+      float:left;
+    }
+    
+    #newsletter form {
+      float:right;
+      margin-top:15px;
+    }
+    
+    #newsletter input[type="email"]{
+      padding:4px;
+      height:25px;
+      width:250px;
+    }
+    
+    /* Boxes */
+    #boxes{
+      margin-top:20px;
+    }
+    
+    #boxes .box{
+      float:left;
+      text-align: center;
+      width:30%;
+      padding:10px;
+    }
+    
+    #boxes .box img{
+      width:90px;
+    }
+    
+    /* Sidebar */
+    aside#sidebar{
+      float:right;
+      width:30%;
+      margin-top:10px;
+    }
+    
+    aside#sidebar .quote input, aside#sidebar .quote textarea{
+      width:90%;
+      padding:5px;
+    }
+    
+    /* Main-col */
+    article#main-col{
+      float:left;
+      width:65%;
+    }
+    
+    /* Services */
+    ul#services li{
+      list-style: none;
+      padding:20px;
+      border: #cccccc solid 1px;
+      margin-bottom:5px;
+      background:#e6e6e6;
+    }
+    
+    footer{
+      padding:20px;
+      margin-top:20px;
+      color:#ffffff;
+      background-color:#248fd6;
+      text-align: center;
+    }
+    
+    /* Media Queries */
+    @media(max-width: 768px){
+      header #branding,
+      header nav,
+      header nav li,
+      #newsletter h1,
+      #newsletter form,
+      #boxes .box,
+      article#main-col,
+      aside#sidebar{
+        float:none;
+        text-align:center;
+        width:100%;
+      }
+    
+      header{
+        padding-bottom:20px;
+      }
+    
+      #showcase h1{
+        margin-top:40px;
+      }
+    
+      #newsletter button, .quote button{
+        display:block;
+        width:100%;
+      }
+    
+      #newsletter form input[type="email"], .quote input, .quote textarea{
+        width:100%;
+        margin-bottom:5px;
+      }
+    }
+    
+    </style>
+    
+
+    <header>
+      
+      <div class="container">
+       
+        <div id="branding">
+          
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="{% url 'home' %}"></a></li>
+            <li><a href="{% url 'pdf' %}"></a></li>
+            <li><a href="{% url 'exer' %}">Exercices</a></li>
+            <li><a href=""></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+      <div class="container">
+        <img src="{% static 'assets/img/Icone_ID.png' %}" alt="" class="rounded-5" width="100px"><br>
+        <h1 class=""><span class="highlight">Idéal</span>APP</h1>
+          <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              Menu
+              <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'home' %}">Accueil</a></li>
+                  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'pdf' %}">Téléchargementt</a></li>
+                  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'exer' %}">Exercises</a></li>
+                  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'logout_account' %}">Se déconnecter</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+    
+      {% block content %}
+      
+      {% endblock %}
+  
+    
+   <!-- Footer-->
+   <footer class="footer text-center">
+    <div class="container">
+        <div class="row">
+            <!-- Footer Location-->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Chef de Traveaux</h4>
+                <p class="lead mb-0">
+                    Kitoko Mwana Alphonse
+                    <br />
+                    Concépteur des applications web et mobile
+                </p>
+            </div>
+            <!-- Footer Social Icons-->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Nos pages web</h4>
+                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+            </div>
+            <!-- Footer About Text-->
+            <div class="col-lg-4">
+                <h4 class="text-uppercase mb-4">à Propos du IdéalApp</h4>
+                <p class="lead mb-0">
+                    Formation en développement web et encompannement des vos projets !
+                    <a href="#">Contactez nous</a>
+                    .
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+  </body>
+</html>
+

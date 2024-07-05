@@ -1,0 +1,59 @@
+{% extends "acc.html" %}
+{% load static %}
+{% block title %}
+| Download
+{% endblock %}
+{% block content %}
+<section class="home" id="home">
+  <div class="row">
+    <div class="content rounded-5">
+      <h3>Télécharger le support du cours gratuitement dans <span>IdealApp</span> </h3>
+      <p>Le support mise à la disposition des étudiants pour l'amelioration de leur connaissance professionnelle</p>
+    </div>
+    <div class="image">
+      <img src="{% static 'assets/img/logo id.png' %}" alt="">
+    </div>
+  </div>
+</section>
+<br>
+<section id="boxes">
+    <div class="container">
+      <h2 style="text-align: center;">Cours à Télécharger </h2>
+      <br>
+      <div class="box">
+        <img src="{% static 'assets/img/4.jpg' %}">
+        <h3>Cour python</h3>
+        <p class="card-text"><strong>L1 LMD Jour et Soir</strong></p>
+        <p>Python est régulièrement classé parmi les langages de programmation les plus faciles à apprendre. Il est réputé pour sa grande fiabilité et sa syntaxe simple, qui attirent en particulier les nouveaux programmeurs.</p>
+        <a href="{% static 'pdf/api_python.docx' %}" class="btn btn-primary" download="Cour de la programmation python.docx">Download </a>
+
+      </div>
+      <div class="box">
+        <img src="">
+        <br>
+        <br>
+
+        <h3>Mises à Jour d'un système informatique</h3>
+        <p class="card-text"><strong>L3 LMD Jour et Soir</strong></p>
+
+        <p>Dévenez expert sur la structure et le mises à jour d'un système informatiser .</p>
+        <a href="{% static 'pdf/api_python.docx' %}" class="btn btn-primary" download="Cour de la programmation python.docx">Download </a>
+
+      </div>
+      <div class="box">
+        <img src="">
+        <br>
+        <br>
+
+        <h3>Conception</h3>
+        <p class="card-text"><strong>L1 Soir</strong></p>
+
+        <h5 style="color: brown;" >Non disponible</h5>
+        <a href="{% static 'pdf/api_python.docx' %}" class="btn btn-primary" download="Cour de la programmation python.docx">Download </a>
+
+      </div>
+      
+    </div>
+  </section>
+
+  {% endblock %}
